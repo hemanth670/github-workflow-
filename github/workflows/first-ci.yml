@@ -1,0 +1,26 @@
+name: My First CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  practice:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print Message
+        run: echo "Hello from GitHub Actions"
+
+      - name: Show Linux User
+        run: whoami
+
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Repository Files
+        run: ls -la
